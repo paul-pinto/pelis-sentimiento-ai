@@ -1,19 +1,7 @@
-# Manipulación de datos y base de datos
-pandas==2.2.0
-
-# Deep Learning y NLP
-torch==2.2.0
-transformers==4.37.2
-sentencepiece==0.1.99
-sacremoses==0.1.1  # HuggingFace lo recomienda para modelos MarianMT
-
-# Evaluación y Métricas
-scikit-learn==1.4.0
-
-# Interfaz y Herramientas de Notebook
-jupyter==1.0.0
-ipykernel==6.29.0
-tqdm==4.66.1
-
-# El "Plus" Web
-streamlit==1.31.0
+streamlit
+pandas
+torch
+transformers
+sentencepiece
+sacremoses
+scikit-learn
