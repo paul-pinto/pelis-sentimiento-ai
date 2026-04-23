@@ -1,3 +1,7 @@
 streamlit
 pandas
+torch
 transformers
+sentencepiece
+sacremoses
+scikit-learn
