@@ -1,0 +1,8 @@
+# Entornos virtuales
+.venv/
+venv/
+__pycache__/
+
+# Archivos generados localmente (opcional, pero recomendado)
+result/
+project.ipynb
