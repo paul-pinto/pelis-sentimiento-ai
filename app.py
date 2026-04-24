@@ -16,11 +16,10 @@ st.set_page_config(
 def load_translator(lang):
     try:
         if lang == "Spanish":
-            # Tarea específica para evitar KeyError en versiones nuevas
-            return pipeline("translation_es_to_en", model="Helsinki-NLP/opus-mt-es-en")
+            # Usamos la tarea genérica 'translation' pero con el modelo específico
+            return pipeline("translation", model="Helsinki-NLP/opus-mt-es-en")
         elif lang == "French":
-            # Tarea específica para evitar KeyError en versiones nuevas
-            return pipeline("translation_fr_to_en", model="Helsinki-NLP/opus-mt-fr-en")
+            return pipeline("translation", model="Helsinki-NLP/opus-mt-fr-en")
     except Exception as e:
         st.error(f"Error al cargar el traductor: {e}")
     return None
