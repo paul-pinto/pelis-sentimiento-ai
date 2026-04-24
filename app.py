@@ -25,9 +25,16 @@ def load_translator(lang):
     return None
 
 @st.cache_resource
-def load_sentiment_model():
-    # Modelo DistilBERT pre-entrenado y ligero
-    return pipeline("text-classification", model="distilbert-base-uncased-finetuned-sst-2-english")
+def load_translator(lang):
+    try:
+        if lang == "Spanish":
+            # Usamos la tarea genérica 'translation'
+            return pipeline("translation", model="Helsinki-NLP/opus-mt-es-en")
+        elif lang == "French":
+            return pipeline("translation", model="Helsinki-NLP/opus-mt-fr-en")
+    except Exception as e:
+        st.error(f"Error al cargar el traductor: {e}")
+    return None
 
 # 3. Interfaz de Usuario (UI)
 st.title("🎬 Analizador de Reseñas AI")
